@@ -5,5 +5,6 @@ import os
 def home(request):
 	hell = "Follwng_final.txt"
 	fwng = []
-	fwng = fllwngcls.fllwnglistfunc()
+	fwngobj = fllwng.fllwngcls()
+	fwng = fwngobj.fllwnglistfunc()
 	return render(request,'home.html',{'flwng':fwng})
