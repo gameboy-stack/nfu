@@ -7,11 +7,14 @@ def home(request):	#,acc,acctype
 	fwng = []
 	fwngobj = fllwng.fllwngcls()
 	fwng = fwngobj.fllwnglistfunc()
-	profile = fwngobj.logi("_._.venki._._") 
+	profile = fwngobj.logi("_._.venki._._")
 	print("prof priv")
 	print(profile.is_private)
 	print("follow by view")
 	print(profile.followed_by_viewer)
-	fwngobj.ntffunc(profile)
+	usrnfu = fwngobj.ntffunc(profile)
 
-	return render(request,'home.html',{'flwng':fwng})
+	ntfufinallist = list(set(usrnfu) - set(fwng))
+	ntfufinallist.sort()
+
+	return render(request,'home.html',{'no':len(ntfufinallist),'flwng':ntfufinallist})
