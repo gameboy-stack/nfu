@@ -1,14 +1,15 @@
 from django.shortcuts import render
 from nfu.settings import *
+from . import fllwng
 import os
 def home(request):
 	hell = "Follwng_final.txt"
 	dirf = os.path.join(BASE_DIR,hell)
-	fllwng = []
+	fwng = []
+	fwng = fllwngcls.fllwnglistfunc()
 
-	with open(dirf) as f:
-		fllwng = [line.rstrip() for line in f]
+
 
 	chckng = dirf if dirf!="" else "nthng"
 
-	return render(request,'home.html',{'check':chckng,'flwng':fllwng})
+	return render(request,'home.html',{'check':chckng,'flwng':fwng})
