@@ -20,4 +20,4 @@ def home(request):	#,acc
 	ntfufinallist = list(set(usrnfu) - set(fwng))
 	ntfufinallist.sort()
 
-	return render(request,'home.html',{'no':len(ntfufinallist),'flwng':ntfufinallist})
+	return render(request,'home.html',{'flwng':ntfufinallist})
