@@ -1,7 +1,6 @@
 from django.shortcuts import render
 from nfu.settings import *
 from . import fllwng
-from instabot import Bot
 import os
 def home(request):	#,acc
 	hell = "Follwng_final.txt"
@@ -20,8 +19,5 @@ def home(request):	#,acc
 
 	ntfufinallist = list(set(usrnfu) - set(fwng))
 	ntfufinallist.sort()
-	bot = Bot()
-	bot.login(username="ntf_u",password="=-0987654321`")
-	bot.follow("nibba_12_234")
 
 	return render(request,'home.html',{'no':len(ntfufinallist),'flwng':ntfufinallist})
