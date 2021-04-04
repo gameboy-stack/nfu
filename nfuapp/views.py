@@ -9,8 +9,8 @@ def home(request):	#,acc
 	fwngobj = fllwng.fllwngcls()
 	fwng = fwngobj.fllwnglistfunc() # pre prepared following list
 	profile = fwngobj.logi("_._.venki._._") # acc 
-		"""	if(profile.is_private):
-		if(profile.followed_by_viewer == False):"""
+	"""	if(profile.is_private):
+	if(profile.followed_by_viewer == False):"""
 
 	print("prof priv")
 	print(profile.is_private)
