@@ -11,10 +11,6 @@ def home(request):	#,acc
 	"""	if(profile.is_private):
 	if(profile.followed_by_viewer == False):"""
 
-	print("prof priv")
-	print(profile.is_private)
-	print("follow by view")
-	print(profile.followed_by_viewer)
 	usrnfu = fwngobj.ntffunc(profile)
 
 	ntfufinallist = list(set(usrnfu) - set(fwng))
